@@ -1,0 +1,52 @@
+:root {
+    --primary: #1b4332;
+    --accent: #d4af37;
+    --bg: #f4f4f9;
+}
+
+body { font-family: 'Segoe UI', Tahoma, sans-serif; background: var(--bg); margin: 0; padding: 20px; }
+header { text-align: center; margin-bottom: 30px; }
+
+.container { display: flex; gap: 40px; max-width: 1100px; margin: 0 auto; flex-wrap: wrap; }
+.controls { flex: 1; min-width: 300px; display: flex; flex-direction: column; gap: 15px; }
+
+/* The Card Preview */
+.card-container {
+    position: relative;
+    width: 100%;
+    max-width: 400px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    transition: aspect-ratio 0.3s ease;
+}
+
+.square-ratio { aspect-ratio: 1 / 1; }
+.portrait-ratio { aspect-ratio: 9 / 16; }
+
+/* Placeholder Backgrounds - Replace with your PNGs */
+.classic-bg { background-color: #8b0000; background-image: url('assets/classic.png'); }
+.minimal-bg { background-color: #f5f5dc; background-image: url('assets/minimal.png'); }
+.geometric-bg { background-color: #2d5a27; background-image: url('assets/geo.png'); }
+.night-bg { background-color: #1a1a2e; background-image: url('assets/night.png'); }
+
+.overlay {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+    text-align: center;
+    color: white;
+    background: rgba(0,0,0,0.2); /* Slight dim to make text pop */
+}
+
+#preview-msg { font-size: 1.2rem; line-height: 1.5; margin-bottom: 20px; font-style: italic; }
+#preview-name { font-size: 1.5rem; font-weight: bold; color: var(--accent); }
+
+textarea, input { padding: 12px; border: 1px solid #ccc; border-radius: 8px; width: 100%; box-sizing: border-box; }
+.primary-btn { padding: 15px; background: var(--primary); color: white; border: none; border-radius: 8px; cursor: pointer; font-weight: bold; margin-top: 10px; }
